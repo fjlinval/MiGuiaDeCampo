@@ -23,12 +23,20 @@ let timeMinutes = String(tiempoActual.getMinutes()).padStart(2,"0");
 let timeSeconds = String(tiempoActual.getSeconds()).padStart(2,"0");
 let timeDigital = timeHours + ":" + timeMinutes + ":" + timeSeconds;
 ```
+
 Con esto lo que hacemos es pasar a *String* las variables y, con **padStart(2,"0")**, rellenamos la cadena de caracteres que hemos convertido, que pueden ser de 1-2 si se da el caso de ser las 1:00 am, con **2** caracteres obligatoriamente, añadiendo **desde la izquierda** los caracteres que pongamos entre comillas en la función, en este caso **"0"**.<br>
 En definitiva, te añade un **0** si sólo hay *1* carácter en el String.<br>
 Con **"let timeDigital"** prácticamente concatenamos las variables anteriores y las ponemos en formato de reloj digital, como por ejemplo:
 
 ```
 06:07:33
+```
+## Para fechas
+Si lo que queremos es capturar la fecha actual, en formato **"XX/XX/XXXX"**, debéis usar:
+
+```
+let time = new Date ();
+let timeDate = time.toLocaleDateString();
 ```
 
 ## **Importante**
