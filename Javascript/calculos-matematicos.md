@@ -38,6 +38,18 @@ let minArray = Math.min(...peperray); // Devolverá -4
 
 Es **Imporante** colocar los **...** delante de la variable array llamada o dará un resultado **NaN**.
 
+## Recibir un número aleatorio
+
+Con el método **random** podemos montar una función (ya que por sí sola nos muestra un número decimal entre 0 y 0.9999...) para conseguir un **int** aleatorio, introduciendo nosotros el número máximo **(que no se incluirá)** en la propia funcion:
+
+```
+function randomInt (maxNumber) {
+    return Math.floor(Math.random() * (maxNumber + 1));
+}
+```
+
+Por lo que, si insertamos **randomInt (100)** nos devolverá un número comprendido entre *0 - 100*.
+
 ## Número PI
 La propiedad PI sirve para tener el propio número PI y poder guardarlo en una constante:
 
