@@ -43,12 +43,12 @@ Es **Imporante** colocar los **...** delante de la variable array llamada o dar�
 Con el método **random** podemos montar una función (ya que por sí sola nos muestra un número decimal entre 0 y 0.9999...) para conseguir un **int** aleatorio, introduciendo nosotros el número máximo **(que no se incluirá)** en la propia funcion:
 
 ```
-function randomInt (maxNumber) {
-    return Math.floor(Math.random() * (maxNumber + 1));
+function randomInt (minNumber,maxNumber) {
+    return Math.floor(Math.random() * ((maxNumber + 1) - minNumber) + minNumber);
 }
 ```
 
-Por lo que, si insertamos **randomInt (100)** nos devolverá un número comprendido entre *0 - 100*.
+Por lo que, si insertamos **randomInt (0,100)** nos devolverá un número comprendido entre *0 - 100*.
 
 ## Número PI
 La propiedad PI sirve para tener el propio número PI y poder guardarlo en una constante:
@@ -56,6 +56,5 @@ La propiedad PI sirve para tener el propio número PI y poder guardarlo en una c
 ```
 Math.PI;
 ```
-
 
 +info Math --> (https://developer.mozilla.org/es/docs/Web/JavaScript/Reference/Global_Objects/Math)
